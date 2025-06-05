@@ -1,0 +1,387 @@
+<!doctype html>
+<html>
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="./css/fonts.css">
+	
+	<script src="https://cdn.tailwindcss.com"></script>
+	<link href="https://cdn.jsdelivr.net/npm/flowbite@3.1.2/dist/flowbite.min.css" rel="stylesheet" />
+	
+	<script src="https://cdn.tailwindcss.com?plugins=forms,typography,aspect-ratio,container-queries"></script>
+
+	<script>
+		tailwind.config = {
+		  theme: {
+			extend: {
+			  fontFamily: {
+				custom: ['MyCustomFont', 'sans-serif'],
+			  }
+			}
+		  }
+		}
+	</script>
+	
+	<script>
+		function changeStyle(x){
+			var Div1 = document.getElementById("Div1");
+			var Div2 = document.getElementById("Div2");
+			var Div3 = document.getElementById("Div3");
+			var Text1 = document.getElementById("Text1");
+			var Text2 = document.getElementById("Text2");
+			var Text3 = document.getElementById("Text3");
+
+			if (x == 1) {
+				Text1.style.display = "flex";
+				Div1.style.maxHeight = "none";
+				return;
+			} else
+			if (x == 2) {
+				Text2.style.display = "flex";
+				Div2.style.maxHeight = "none";
+				return;
+			} else
+			if (x == 3) {
+				Text3.style.display = "flex";
+				Div3.style.maxHeight = "none";
+				return;
+			}
+		}
+		
+		function changeStyleback(x){
+			var Div1 = document.getElementById("Div1");
+			var Div2 = document.getElementById("Div2");
+			var Div3 = document.getElementById("Div3");
+			var Text1 = document.getElementById("Text1");
+			var Text2 = document.getElementById("Text2");
+			var Text3 = document.getElementById("Text3");
+
+			if (x == 1) {
+				Text1.style.display = "none";
+				Div1.style.maxHeight = "40px";
+				return;
+			}
+			if (x == 2) {
+				Text2.style.display = "none";
+				Div2.style.maxHeight = "40px";
+				return;
+			}
+			if (x == 3) {
+				Text3.style.display = "none";
+				Div3.style.maxHeight = "40px";
+				return;
+			}
+		}
+	</script>
+</head>
+
+<body class="font-custom">
+	<nav class="bg-white">
+		<div class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
+			
+			<!-- Логотип -->
+			<a href="#" class="hover:text-gray-900">
+				<svg class="w-10 h-10" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 210.64 214.36">
+					<defs>
+						<style>
+							.cls-1 {
+								stroke-width: 0px;
+							}
+						</style>
+					</defs>
+					<path class="cls-1" d="m76.43,162.13c0,3.35-1.23,6.07-3.68,8.18-2.46,2.11-5.68,3.16-9.68,3.16h-22.19v-40.89h21.3c3.72,0,6.8,1,9.23,3,2.43,2,3.64,4.53,3.64,7.61,0,2.05-.57,3.87-1.7,5.47-1.13,1.59-2.73,2.74-4.78,3.44,5.24,1.89,7.85,5.24,7.85,10.04Zm-26.48-22.35v9.72h10.61c1.73,0,3.09-.43,4.09-1.3,1-.86,1.5-2.05,1.5-3.56s-.5-2.7-1.5-3.56c-1-.86-2.36-1.3-4.09-1.3h-10.61Zm11.42,26.48c1.78,0,3.2-.46,4.25-1.38,1.05-.92,1.58-2.16,1.58-3.72,0-1.67-.53-2.97-1.58-3.89-1.05-.92-2.47-1.38-4.25-1.38h-11.42v10.36h11.42Z"/>
+					<path class="cls-1" d="m35.55,203.03c0,3.35-1.23,6.07-3.68,8.18-2.46,2.11-5.68,3.16-9.68,3.16H0v-40.89h21.3c3.72,0,6.8,1,9.23,3,2.43,2,3.64,4.53,3.64,7.61,0,2.05-.57,3.87-1.7,5.47-1.13,1.59-2.73,2.74-4.78,3.44,5.24,1.89,7.85,5.24,7.85,10.04Zm-26.48-22.35v9.72h10.61c1.73,0,3.09-.43,4.09-1.3,1-.86,1.5-2.05,1.5-3.56s-.5-2.7-1.5-3.56c-1-.86-2.36-1.3-4.09-1.3h-10.61Zm11.42,26.48c1.78,0,3.2-.46,4.25-1.38,1.05-.92,1.58-2.16,1.58-3.72,0-1.67-.53-2.97-1.58-3.89-1.05-.92-2.47-1.38-4.25-1.38h-11.42v10.36h11.42Z"/>
+					<path class="cls-1" d="m119,113.62h-29.96c.38,3.51,1.55,6.25,3.52,8.22,1.97,1.97,4.57,2.96,7.81,2.96,2.16,0,4.08-.46,5.75-1.38,1.67-.92,2.97-2.24,3.89-3.97l8.1,1.13c-1.3,3.78-3.51,6.72-6.64,8.83-3.13,2.11-6.83,3.16-11.09,3.16-4,0-7.53-.9-10.61-2.71-3.08-1.81-5.47-4.32-7.17-7.53-1.7-3.21-2.55-6.9-2.55-11.05s.84-7.84,2.51-11.05c1.67-3.21,4.02-5.72,7.04-7.53,3.02-1.81,6.45-2.71,10.28-2.71s7.07.85,10.04,2.55c2.97,1.7,5.29,4.08,6.96,7.13,1.67,3.05,2.51,6.55,2.51,10.49,0,.97-.14,2.13-.4,3.48Zm-26.11-13.56c-1.86,1.7-3.09,4.09-3.68,7.17h21.54c-.49-3.08-1.69-5.47-3.6-7.17-1.92-1.7-4.33-2.55-7.25-2.55s-5.14.85-7,2.55Z"/>
+					<path class="cls-1" d="m128.66,98.79v-57.09h8.58v7.04h.4c1.57-2.54,3.54-4.48,5.91-5.83,2.37-1.35,5.05-2.02,8.02-2.02,3.4,0,6.44.89,9.11,2.67,2.67,1.78,4.76,4.28,6.28,7.49,1.51,3.21,2.27,6.92,2.27,11.13s-.76,7.85-2.27,11.09c-1.51,3.24-3.59,5.75-6.24,7.53-2.64,1.78-5.64,2.67-8.99,2.67-2.91,0-5.56-.66-7.94-1.98-2.38-1.32-4.21-3.14-5.51-5.47h-.41v22.75h-9.23Zm28.5-26.8c1.89-2.37,2.83-5.64,2.83-9.8s-.96-7.44-2.87-9.84c-1.92-2.4-4.52-3.6-7.81-3.6s-6.15,1.23-8.26,3.68c-2.11,2.46-3.16,5.71-3.16,9.76s1.05,7.29,3.16,9.72c2.11,2.43,4.86,3.64,8.26,3.64s5.96-1.19,7.85-3.56Z"/>
+					<path class="cls-1" d="m209.75,0l-12.63,20.24,13.52,20.65h-10.04l-9.39-14.57h-.4l-9.39,14.57h-9.64l13.44-20.73L172.59,0h9.64l8.91,14.41h.41l8.99-14.41h9.23Z"/>
+				</svg>
+				<span class="sr-only">вверх</span>
+			</a>
+			
+			<!-- Авторизация -->
+			<div class="flex items-center md:order-2 space-x-3 md:space-x-0 rtl:space-x-reverse">
+				  <button type="button" class="flex text-sm bg-gray-800 rounded-full md:me-0 focus:ring-4 focus:ring-gray-300" id="user-menu-button" aria-expanded="false" data-dropdown-toggle="user-dropdown" data-dropdown-placement="bottom">
+					<span class="sr-only">Open user menu</span>
+					<img class="w-8 h-8 rounded-full" src="./img/photo.jpg" alt="user photo">
+				  </button>
+				  
+				  <!-- Dropdown menu -->
+				  <div class="z-50 hidden my-4 text-base list-none bg-white divide-y divide-gray-100 rounded-lg shadow-sm" id="user-dropdown">
+					<div class="px-4 py-3">
+					  <span class="block text-sm text-gray-900">Bonnie Green</span>
+					  <span class="block text-sm  text-gray-500 truncate">name@flowbite.com</span>
+					</div>
+					<ul class="py-2" aria-labelledby="user-menu-button">
+					  <li>
+						<a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Dashboard</a>
+					  </li>
+					  <li>
+						<a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Settings</a>
+					  </li>
+					  <li>
+						<a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Earnings</a>
+					  </li>
+					  <li>
+						<a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Sign out</a>
+					  </li>
+
+					</ul>
+				  </div>
+				  <button data-collapse-toggle="navbar-user" type="button" class="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200" aria-controls="navbar-user" aria-expanded="false">
+					<span class="sr-only">Open main menu</span>
+					<svg class="w-5 h-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 17 14">
+						<path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 1h15M1 7h15M1 13h15"/>
+					</svg>
+				</button>
+			</div>
+			  
+			<!-- Меню -->
+			<div class="items-center justify-between hidden w-full md:flex md:w-auto md:order-1" id="navbar-user">
+				<ul class="flex flex-col font-medium p-4 md:p-0 mt-4 rounded-lg md:space-x-8 rtl:space-x-reverse md:flex-row md:mt-0 md:border-0">
+					<li>
+						<a href="#" class="block py-2 px-3 text-white bg-blue-700 rounded-sm md:bg-transparent md:text-blue-700 md:p-0" aria-current="page">главная</a>
+					</li>
+					<li>
+						<a href="#" class="block py-2 px-3 text-gray-900 rounded-sm hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0">скалодром</a>
+					</li>
+					<li>
+						<button id="dropdownNavbarLink" data-dropdown-toggle="dropdownNavbar1"
+							class="flex items-center justify-between w-full py-2 px-3 text-gray-900 rounded-sm
+								hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 md:w-auto">выезды
+						<svg class="w-2.5 h-2.5 ms-2.5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 10 6">
+							<path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m1 1 4 4 4-4"/>
+						</svg>
+						</button>
+
+						<div id="dropdownNavbar1" class="z-10 hidden font-normal bg-white divide-y divide-gray-100 rounded-lg shadow-sm w-44">
+							<ul class="py-2 text-sm text-gray-700" aria-labelledby="dropdownLargeButton">
+							  <li>
+								<a href="#" class="block px-4 py-2 hover:bg-gray-100">Альпинизм</a>
+							  </li>
+							  <li>
+								<a href="#" class="block px-4 py-2 hover:bg-gray-100">Трекинг</a>
+							  </li>
+							  <li>
+								<a href="#" class="block px-4 py-2 hover:bg-gray-100">Скалолазание</a>
+							  </li>
+							</ul>
+						</div>
+					</li>
+					<li>
+						<button id="dropdownNavbarLink" data-dropdown-toggle="dropdownNavbar2"
+							class="flex items-center justify-between w-full py-2 px-3 text-gray-900 rounded-sm
+								hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 md:w-auto">лекции
+						<svg class="w-2.5 h-2.5 ms-2.5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 10 6">
+							<path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m1 1 4 4 4-4"/>
+						</svg>
+						</button>
+
+						<div id="dropdownNavbar2" class="z-10 hidden font-normal bg-white divide-y divide-gray-100 rounded-lg shadow-sm w-44">
+							<ul class="py-2 text-sm text-gray-700" aria-labelledby="dropdownLargeButton">
+							  <li>
+								<a href="#" class="block px-4 py-2 hover:bg-gray-100">Крым</a>
+							  </li>
+							  <li>
+								<a href="#" class="block px-4 py-2 hover:bg-gray-100">Кавказ</a>
+							  </li>
+							  <li>
+								<a href="#" class="block px-4 py-2 hover:bg-gray-100">Альпы</a>
+							  </li>
+							</ul>
+						</div>
+					</li>
+					<li>
+						<a href="#" class="block py-2 px-3 text-gray-900 rounded-sm hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0">магазин</a>
+					</li>
+					<li>
+						<a href="#" class="block py-2 px-3 text-gray-900 rounded-sm hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0">медиа</a>
+					</li>
+				</ul>
+			</div>
+		</div>
+	</nav>
+	
+	<!-- Главная страница -->
+	<div class="flex flex-col">
+		
+		<!-- Слайд 1 -->
+		<div class="h-[12rem] z-10 -mb-[7px]">
+			<div class="text-8xl font-bold text-center -my-4">горизонты
+				<div class="text-8xl font-bold -ml-[353px] -my-9">новые
+					<div class="text-8xl font-bold -ml-[200px] -my-9">покори</div>
+				</div>
+			</div>
+		</div>
+		
+		<!-- Слайд 2 -->
+		<div class="flex z-0 items-center">
+			<div class="flex relative overflow-hidden w-full h-[20rem] text-center">
+				<video class="w-full h-full object-cover" autoplay muted loop>
+					<source src="./img/video.mp4" type="video/mp4">
+					Your browser does not support the video tag.
+				</video>
+				<div class="flex flex-col absolute top-0 left-0 w-full h-full px-10 py-10">
+					<div class="flex-none">
+						<p class="text-xl text-left">Любишь активный отдых и приключения?</p>
+						<p class="text-xl text-left">Хочешь научится новым навыкам?</p>
+						<p class="text-xl text-left">Тогда наш альпинистский центр - это место для тебя!</p>
+					</div>
+					<div class="grow"></div>
+					<div>
+						<img class="flex-none h-10 object-contain" src="./img/sss.png" />
+					</div>
+				</div>
+				
+				
+			</div>
+		</div>
+		
+		<!-- Слайд 3 -->
+		<div class="z-10">
+			<div class = "flex flex-col m-20 space-y-10">
+				<button type="button" onmouseout="changeStyleback(1)" onmouseover="changeStyle(1)" class="text-3xl text-center hover:text-blue-500">альпинизм</button>
+				<button type="button" onmouseout="changeStyleback(2)" onmouseover="changeStyle(2)" class="text-3xl text-center hover:text-green-500">скалолазание</p>
+				<button type="button" onmouseout="changeStyleback(3)" onmouseover="changeStyle(3)" class="text-3xl text-center hover:text-orange-500">трекинг</p>
+			</div>
+			<div class = "flex flex-row">
+				<div class="h-10"></div>
+				<div id = "Div1" class = "basis-1/3 bg-blue-500 max-h-10">
+					<div class = "flex flex-col">
+						<div class= "grow"></div>
+						<div id="Text1" class = "hidden p-4">
+							Our Tailwind CSS Image component simplifies image handling and styling, offering an array of classes to achieve the image effects that you are looking for in your website or application.
+						</div>
+					</div>
+				</div>
+				<div id = "Div2" class = "basis-1/3 bg-green-500 max-h-10">
+					<div class = "flex flex-col">
+						<div class= "grow"></div>
+						<div id="Text2" class = "hidden p-4">
+							Our Tailwind CSS Image component simplifies image handling and styling, offering an array of classes to achieve the image effects that you are looking for in your website or application.
+						</div>
+					</div>
+				</div>
+				<div id = "Div3" class = "basis-1/3 bg-orange-500 max-h-10">
+					<div class = "flex flex-col">
+						<div class= "grow"></div>
+						<div id="Text3" class = "hidden p-4">
+							Our Tailwind CSS Image component simplifies image handling and styling, offering an array of classes to achieve the image effects that you are looking for in your website or application.
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<!-- Футер -->
+		<div class="z-10 bg-white bottom-0 left-0 right-0">
+			<div class="mx-auto w-full max-w-screen-xl">
+			  <div class="grid grid-cols-2 gap-8 px-4 py-6 lg:py-8 md:grid-cols-4">
+				<div>
+					<h2 class="mb-6 text-sm font-semibold text-gray-900 uppercase">Company</h2>
+					<ul class="text-gray-500 font-medium">
+						<li class="mb-4">
+							<a href="#" class="hover:underline">About</a>
+						</li>
+						<li class="mb-4">
+							<a href="#" class="hover:underline">Careers</a>
+						</li>
+						<li class="mb-4">
+							<a href="#" class="hover:underline">Brand Center</a>
+						</li>
+						<li class="mb-4">
+							<a href="#" class="hover:underline">Blog</a>
+						</li>
+					</ul>
+				</div>
+				<div>
+					<h2 class="mb-6 text-sm font-semibold text-gray-900 uppercase">Help center</h2>
+					<ul class="text-gray-500 font-medium">
+						<li class="mb-4">
+							<a href="#" class="hover:underline">Discord Server</a>
+						</li>
+						<li class="mb-4">
+							<a href="#" class="hover:underline">Twitter</a>
+						</li>
+						<li class="mb-4">
+							<a href="#" class="hover:underline">Facebook</a>
+						</li>
+						<li class="mb-4">
+							<a href="#" class="hover:underline">Contact Us</a>
+						</li>
+					</ul>
+				</div>
+				<div>
+					<h2 class="mb-6 text-sm font-semibold text-gray-900 uppercase dark:text-white">Legal</h2>
+					<ul class="text-gray-500 dark:text-gray-400 font-medium">
+						<li class="mb-4">
+							<a href="#" class="hover:underline">Privacy Policy</a>
+						</li>
+						<li class="mb-4">
+							<a href="#" class="hover:underline">Licensing</a>
+						</li>
+						<li class="mb-4">
+							<a href="#" class="hover:underline">Terms &amp; Conditions</a>
+						</li>
+					</ul>
+				</div>
+				<div>
+					<h2 class="mb-6 text-sm font-semibold text-gray-900 uppercase dark:text-white">Download</h2>
+					<ul class="text-gray-500 dark:text-gray-400 font-medium">
+						<li class="mb-4">
+							<a href="#" class="hover:underline">iOS</a>
+						</li>
+						<li class="mb-4">
+							<a href="#" class="hover:underline">Android</a>
+						</li>
+						<li class="mb-4">
+							<a href="#" class="hover:underline">Windows</a>
+						</li>
+						<li class="mb-4">
+							<a href="#" class="hover:underline">MacOS</a>
+						</li>
+					</ul>
+				</div>
+			</div>
+			<div class="px-4 py-6 bg-white md:flex md:items-center md:justify-between">
+				<span class="text-sm text-gray-500 sm:text-center">© 2023 <a href="https://flowbite.com/">Flowbite™</a>. All Rights Reserved.
+				</span>
+				<div class="flex mt-4 sm:justify-center md:mt-0 space-x-5 rtl:space-x-reverse">
+					<a href="#" class="text-gray-400 hover:text-gray-900 dark:hover:text-white">
+						  <svg class="w-4 h-4" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 8 19">
+								<path fill-rule="evenodd" d="M6.135 3H8V0H6.135a4.147 4.147 0 0 0-4.142 4.142V6H0v3h2v9.938h3V9h2.021l.592-3H5V3.591A.6.6 0 0 1 5.592 3h.543Z" clip-rule="evenodd"/>
+							</svg>
+						  <span class="sr-only">Facebook page</span>
+					  </a>
+					  <a href="#" class="text-gray-400 hover:text-gray-900 dark:hover:text-white">
+						  <svg class="w-4 h-4" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 21 16">
+								<path d="M16.942 1.556a16.3 16.3 0 0 0-4.126-1.3 12.04 12.04 0 0 0-.529 1.1 15.175 15.175 0 0 0-4.573 0 11.585 11.585 0 0 0-.535-1.1 16.274 16.274 0 0 0-4.129 1.3A17.392 17.392 0 0 0 .182 13.218a15.785 15.785 0 0 0 4.963 2.521c.41-.564.773-1.16 1.084-1.785a10.63 10.63 0 0 1-1.706-.83c.143-.106.283-.217.418-.33a11.664 11.664 0 0 0 10.118 0c.137.113.277.224.418.33-.544.328-1.116.606-1.71.832a12.52 12.52 0 0 0 1.084 1.785 16.46 16.46 0 0 0 5.064-2.595 17.286 17.286 0 0 0-2.973-11.59ZM6.678 10.813a1.941 1.941 0 0 1-1.8-2.045 1.93 1.93 0 0 1 1.8-2.047 1.919 1.919 0 0 1 1.8 2.047 1.93 1.93 0 0 1-1.8 2.045Zm6.644 0a1.94 1.94 0 0 1-1.8-2.045 1.93 1.93 0 0 1 1.8-2.047 1.918 1.918 0 0 1 1.8 2.047 1.93 1.93 0 0 1-1.8 2.045Z"/>
+							</svg>
+						  <span class="sr-only">Discord community</span>
+					  </a>
+					  <a href="#" class="text-gray-400 hover:text-gray-900 dark:hover:text-white">
+						  <svg class="w-4 h-4" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 17">
+							<path fill-rule="evenodd" d="M20 1.892a8.178 8.178 0 0 1-2.355.635 4.074 4.074 0 0 0 1.8-2.235 8.344 8.344 0 0 1-2.605.98A4.13 4.13 0 0 0 13.85 0a4.068 4.068 0 0 0-4.1 4.038 4 4 0 0 0 .105.919A11.705 11.705 0 0 1 1.4.734a4.006 4.006 0 0 0 1.268 5.392 4.165 4.165 0 0 1-1.859-.5v.05A4.057 4.057 0 0 0 4.1 9.635a4.19 4.19 0 0 1-1.856.07 4.108 4.108 0 0 0 3.831 2.807A8.36 8.36 0 0 1 0 14.184 11.732 11.732 0 0 0 6.291 16 11.502 11.502 0 0 0 17.964 4.5c0-.177 0-.35-.012-.523A8.143 8.143 0 0 0 20 1.892Z" clip-rule="evenodd"/>
+						</svg>
+						  <span class="sr-only">Twitter page</span>
+					  </a>
+					  <a href="#" class="text-gray-400 hover:text-gray-900 dark:hover:text-white">
+						  <svg class="w-4 h-4" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 20">
+								<path fill-rule="evenodd" d="M10 .333A9.911 9.911 0 0 0 6.866 19.65c.5.092.678-.215.678-.477 0-.237-.01-1.017-.014-1.845-2.757.6-3.338-1.169-3.338-1.169a2.627 2.627 0 0 0-1.1-1.451c-.9-.615.07-.6.07-.6a2.084 2.084 0 0 1 1.518 1.021 2.11 2.11 0 0 0 2.884.823c.044-.503.268-.973.63-1.325-2.2-.25-4.516-1.1-4.516-4.9A3.832 3.832 0 0 1 4.7 7.068a3.56 3.56 0 0 1 .095-2.623s.832-.266 2.726 1.016a9.409 9.409 0 0 1 4.962 0c1.89-1.282 2.717-1.016 2.717-1.016.366.83.402 1.768.1 2.623a3.827 3.827 0 0 1 1.02 2.659c0 3.807-2.319 4.644-4.525 4.889a2.366 2.366 0 0 1 .673 1.834c0 1.326-.012 2.394-.012 2.72 0 .263.18.572.681.475A9.911 9.911 0 0 0 10 .333Z" clip-rule="evenodd"/>
+						  </svg>
+						  <span class="sr-only">GitHub account</span>
+					  </a>
+					  <a href="#" class="text-gray-400 hover:text-gray-900 dark:hover:text-white">
+						  <svg class="w-4 h-4" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 20">
+							<path fill-rule="evenodd" d="M10 0a10 10 0 1 0 10 10A10.009 10.009 0 0 0 10 0Zm6.613 4.614a8.523 8.523 0 0 1 1.93 5.32 20.094 20.094 0 0 0-5.949-.274c-.059-.149-.122-.292-.184-.441a23.879 23.879 0 0 0-.566-1.239 11.41 11.41 0 0 0 4.769-3.366ZM8 1.707a8.821 8.821 0 0 1 2-.238 8.5 8.5 0 0 1 5.664 2.152 9.608 9.608 0 0 1-4.476 3.087A45.758 45.758 0 0 0 8 1.707ZM1.642 8.262a8.57 8.57 0 0 1 4.73-5.981A53.998 53.998 0 0 1 9.54 7.222a32.078 32.078 0 0 1-7.9 1.04h.002Zm2.01 7.46a8.51 8.51 0 0 1-2.2-5.707v-.262a31.64 31.64 0 0 0 8.777-1.219c.243.477.477.964.692 1.449-.114.032-.227.067-.336.1a13.569 13.569 0 0 0-6.942 5.636l.009.003ZM10 18.556a8.508 8.508 0 0 1-5.243-1.8 11.717 11.717 0 0 1 6.7-5.332.509.509 0 0 1 .055-.02 35.65 35.65 0 0 1 1.819 6.476 8.476 8.476 0 0 1-3.331.676Zm4.772-1.462A37.232 37.232 0 0 0 13.113 11a12.513 12.513 0 0 1 5.321.364 8.56 8.56 0 0 1-3.66 5.73h-.002Z" clip-rule="evenodd"/>
+						</svg>
+						  <span class="sr-only">Dribbble account</span>
+					  </a>
+				</div>
+			  </div>
+			</div>
+		</div>
+	</div>
+	<script src="https://cdn.jsdelivr.net/npm/flowbite@3.1.2/dist/flowbite.min.js"></script>
+</body>
+</html>
