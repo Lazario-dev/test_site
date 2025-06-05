@@ -7,6 +7,6 @@
   font-style: normal;
   font-weight: 400;
   font-display: swap;
-  src: url('../Test/fonts/TT Neoris Trial Medium.ttf') format('ttf'),
-       url('../Test/fonts/TT Neoris Trial Regular.ttf') format('ttf');
+  src: url('../fonts/TT\ Neoris\ Trial\ Medium.ttf') format('truetype'),
+       url('../fonts/TT\ Neoris\ Trial\ Regular.ttf') format('truetype');
 }

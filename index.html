@@ -4,10 +4,14 @@
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Вверх</title>
+
 	<link rel="stylesheet" href="./css/fonts.css">
+	<script src="./js/main.js"></script>
+
 	<script src="https://cdn.tailwindcss.com"></script>
-	<link href="https://cdn.jsdelivr.net/npm/flowbite@3.1.2/dist/flowbite.min.css" rel="stylesheet" />
 	<script src="https://cdn.tailwindcss.com?plugins=forms,typography,aspect-ratio,container-queries"></script>
+	<link href="https://cdn.jsdelivr.net/npm/flowbite@3.1.2/dist/flowbite.min.css" rel="stylesheet"/>
 
 	<script>
 		tailwind.config = {
@@ -20,58 +24,7 @@
 		  }
 		}
 	</script>
-	
-	<script>
-		function changeStyle(x){
-			var Div1 = document.getElementById("Div1");
-			var Div2 = document.getElementById("Div2");
-			var Div3 = document.getElementById("Div3");
-			var Text1 = document.getElementById("Text1");
-			var Text2 = document.getElementById("Text2");
-			var Text3 = document.getElementById("Text3");
 
-			if (x == 1) {
-				Text1.style.display = "flex";
-				Div1.style.maxHeight = "none";
-				return;
-			} else
-			if (x == 2) {
-				Text2.style.display = "flex";
-				Div2.style.maxHeight = "none";
-				return;
-			} else
-			if (x == 3) {
-				Text3.style.display = "flex";
-				Div3.style.maxHeight = "none";
-				return;
-			}
-		}
-		
-		function changeStyleback(x){
-			var Div1 = document.getElementById("Div1");
-			var Div2 = document.getElementById("Div2");
-			var Div3 = document.getElementById("Div3");
-			var Text1 = document.getElementById("Text1");
-			var Text2 = document.getElementById("Text2");
-			var Text3 = document.getElementById("Text3");
-
-			if (x == 1) {
-				Text1.style.display = "none";
-				Div1.style.maxHeight = "40px";
-				return;
-			}
-			if (x == 2) {
-				Text2.style.display = "none";
-				Div2.style.maxHeight = "40px";
-				return;
-			}
-			if (x == 3) {
-				Text3.style.display = "none";
-				Div3.style.maxHeight = "40px";
-				return;
-			}
-		}
-	</script>
 </head>
 
 <body class="font-custom">
@@ -99,35 +52,37 @@
 			
 			<!-- Авторизация -->
 			<div class="flex items-center md:order-2 space-x-3 md:space-x-0 rtl:space-x-reverse">
-				  <button type="button" class="flex text-sm bg-gray-800 rounded-full md:me-0 focus:ring-4 focus:ring-gray-300" id="user-menu-button" aria-expanded="false" data-dropdown-toggle="user-dropdown" data-dropdown-placement="bottom">
-					<span class="sr-only">Open user menu</span>
-					<img class="w-8 h-8 rounded-full" src="./img/photo.jpg" alt="user photo">
-				  </button>
-				  
-				  <!-- Dropdown menu -->
-				  <div class="z-50 hidden my-4 text-base list-none bg-white divide-y divide-gray-100 rounded-lg shadow-sm" id="user-dropdown">
-					<div class="px-4 py-3">
-					  <span class="block text-sm text-gray-900">Bonnie Green</span>
-					  <span class="block text-sm  text-gray-500 truncate">name@flowbite.com</span>
-					</div>
-					<ul class="py-2" aria-labelledby="user-menu-button">
-					  <li>
-						<a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Dashboard</a>
-					  </li>
-					  <li>
-						<a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Settings</a>
-					  </li>
-					  <li>
-						<a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Earnings</a>
-					  </li>
-					  <li>
-						<a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Sign out</a>
-					  </li>
-
-					</ul>
-				  </div>
-				  <button data-collapse-toggle="navbar-user" type="button" class="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200" aria-controls="navbar-user" aria-expanded="false">
-					<span class="sr-only">Open main menu</span>
+				
+				<div class = "flex flex-row space-x-5">
+					<button type="button">
+						<svg class="w-8 h-8" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 26 25">
+							<defs>
+							<style>
+							.cls-1 {
+								stroke-width: 0px;
+							}
+							</style>
+							</defs>
+							<path class="cls-1" d="m5.46,19.33c-1.8-.46-2.77-2.01-2.61-3.57.18-1.69,1.58-2.85,3.35-2.91V3.67c-.08,0-.16,0-.24,0-1.11,0-2.22,0-3.33,0-.15,0-.3-.01-.45-.05-.36-.11-.59-.49-.56-.9.03-.44.29-.75.69-.82.1-.02.2-.02.29-.02,1.46,0,2.92,0,4.38,0,.65,0,1.01.36,1.01,1.01,0,.36,0,.72,0,1.12h.28c5.2,0,10.41,0,15.61,0,.88,0,1.21.78.87,1.44-1.48,2.88-2.95,5.77-4.42,8.66-.19.38-.49.54-.91.54-3.75,0-7.5,0-11.25,0-.72,0-1.45,0-2.17.02-.65.02-1.16.45-1.34,1.09-.17.6.06,1.25.57,1.6.35.24.76.29,1.17.29,4.26,0,8.51.02,12.77-.01.87,0,1.66.14,2.33.72.95.82,1.34,1.86,1.04,3.09-.3,1.21-1.06,2.04-2.31,2.3-2.06.43-3.87-1.11-3.77-3.12.02-.39.14-.78.22-1.18h-5.61c.57,1.63.19,2.99-1.26,3.95-1.01.68-2.52.54-3.5-.23-.57-.45-.95-1.03-1.1-1.74-.16-.71-.05-1.39.25-2.07Zm2.55-13.53v7.03c.3,0,.59,0,.87,0,3.26,0,6.51.01,9.77.03.24,0,.35-.07.46-.28,1.09-2.15,2.19-4.3,3.28-6.45.05-.1.1-.2.16-.33h-14.55Zm.21,16.22c.71.01,1.32-.57,1.33-1.28.01-.69-.52-1.31-1.14-1.32-.9-.01-1.49.48-1.5,1.26,0,.74.57,1.33,1.31,1.34Zm11.34-2.62c-.75,0-1.33.57-1.33,1.31,0,.74.59,1.31,1.35,1.31.7,0,1.29-.6,1.29-1.32,0-.73-.58-1.31-1.31-1.3Z"/>
+						</svg>
+					</button>
+					<button type="button">
+						<svg svg class="w-8 h-8" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 26 25">
+							<defs>
+								<style>
+								.cls-1 {
+									stroke-width: 0px;
+								}
+								</style>
+							</defs>
+							<path class="cls-1" d="m13.39,1c.24.05.48.09.71.15,1.98.51,3.43,2.22,3.67,4.24.27,2.24-1.3,4.94-4.05,5.36-2.71.42-5.25-1.33-5.68-4.03-.4-2.54,1.2-5.3,4.25-5.69.05,0,.1-.02.15-.04.32,0,.63,0,.95,0Zm-.51,7.93c2,0,3.02-1.62,3.04-3.02.01-1.64-1.38-3.03-3.02-3.03-1.66,0-3.03,1.38-3.02,3.05,0,1.67,1.34,3,3,3Z"/>
+							<path class="cls-1" d="m12.96,13.35c1.03.06,2.06.06,3.08.19,1.36.18,2.51.85,3.5,1.8,1.39,1.33,2.14,2.97,2.41,4.86.15,1.06.16,2.12.16,3.18,0,.53-.4.9-.94.9-.55,0-.93-.38-.95-.92-.02-.81-.02-1.62-.09-2.42-.11-1.38-.53-2.65-1.42-3.73-.96-1.17-2.2-1.83-3.71-1.88-1.47-.05-2.94-.05-4.41,0-1.33.05-2.42.69-3.31,1.66-1.03,1.12-1.55,2.47-1.65,3.98-.05.78-.05,1.56-.06,2.34,0,.36-.12.66-.45.83-.35.18-.71.17-1.05-.04-.28-.17-.39-.44-.39-.75.01-1.52.02-3.05.47-4.53.75-2.46,2.3-4.21,4.76-5.08.8-.28,1.64-.35,2.48-.34.53,0,1.05,0,1.58,0,0-.02,0-.05,0-.07Z"/>
+						</svg>
+					</button>
+				</div>
+				
+				<!-- Бургер -->
+				<button data-collapse-toggle="navbar-user" type="button" class="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200" aria-controls="navbar-user" aria-expanded="false">
 					<svg class="w-5 h-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 17 14">
 						<path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 1h15M1 7h15M1 13h15"/>
 					</svg>
@@ -206,8 +161,8 @@
 		<!-- Слайд 1 -->
 		<div class="h-[12rem] z-10 -mb-[7px]">
 			<div class="text-8xl font-bold text-center -my-4">горизонты
-				<div class="text-8xl font-bold -ml-[353px] -my-9">новые
-					<div class="text-8xl font-bold -ml-[200px] -my-9">покори</div>
+				<div class="text-8xl font-bold -ml-[323px] -my-9">новые
+					<div class="text-8xl font-bold -ml-[171px] -my-9">покори</div>
 				</div>
 			</div>
 		</div>
@@ -216,7 +171,7 @@
 		<div class="flex z-0 items-center">
 			<div class="flex relative overflow-hidden w-full h-[20rem] text-center">
 				<video class="w-full h-full object-cover" autoplay muted loop>
-					<source src="./img/bg_video.mp4" type="video/mp4">
+					<source src="./img/video.mp4" type="video/mp4">
 					Your browser does not support the video tag.
 				</video>
 				<div class="flex flex-col absolute top-0 left-0 w-full h-full px-10 py-10">
@@ -226,12 +181,84 @@
 						<p class="text-xl text-left">Тогда наш альпинистский центр - это место для тебя!</p>
 					</div>
 					<div class="grow"></div>
-					<div>
-						<img class="flex-none h-10 object-contain" src="./img/sss.png" />
+					<div class="flex flex-row space-x-3">
+						<button>
+							<svg class="w-8 h-8" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 49 49">
+								<defs>
+									<style>
+									.cls-1 {
+										stroke-width: 0px;
+									}
+									</style>
+								</defs>
+								<path class="cls-1" d="m30.39,48.24v-14.53c2.08,0,4.08-.05,6.09.02,1.08.04,1.49-.29,1.42-1.4-.09-1.35-.05-2.72,0-4.07.03-.81-.29-1.08-1.07-1.06-2.1.03-4.19.01-6.37.01,0-2.2-.1-4.29.04-6.37.08-1.18.97-1.8,2.22-1.78,1.36.02,2.72-.02,4.08,0,.74.02,1.14-.17,1.11-1.02-.05-1.75-.03-3.51,0-5.26.01-.74-.28-1.02-1.01-1-2.23.08-4.48-.03-6.69.21-4.23.45-6.84,3.12-7.26,7.38-.22,2.17-.2,4.37-.2,6.56,0,.95-.23,1.3-1.25,1.29-2.83-.02-2.83.03-2.82,2.83,0,.04,0,.09,0,.13.04,1.09-.29,2.46.24,3.18.41.55,1.94.22,2.95.38.31.05.81.44.81.68.05,4.81.04,9.62.04,14.64-4.3-.18-8.1-1.46-11.55-3.71-5.63-3.67-9.23-8.81-10.54-15.41C-2.16,16.11,6.8,2.96,20.26.98c14.34-2.12,26.63,7.27,28.17,21.53,1.28,11.85-7.92,25.07-18.04,25.73Z"/>
+							</svg>
+						</button>
+						<button>
+							<svg class="w-8 h-8" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 49 49">
+								<defs>
+									<style>
+									.cls-1 {
+										stroke-width: 0px;
+									}
+									</style>
+								</defs>
+								<path class="cls-1" d="m48.58,24.62c0,13.71-10.52,24.2-24.25,24.2-13.66,0-24.21-10.6-24.19-24.29C.17,10.89,10.72.32,24.29.34c13.84.01,24.3,10.47,24.29,24.29Zm-24.27,14.53h0c2.63,0,5.26.02,7.88-.01,3.77-.05,6.67-2.89,6.72-6.66.06-5.26.06-10.51,0-15.77-.04-3.77-2.94-6.63-6.72-6.66-5.17-.04-10.34-.04-15.51,0-3.96.03-6.8,2.84-6.84,6.8-.05,5.17-.05,10.34,0,15.51.04,3.95,2.89,6.74,6.85,6.8,2.54.03,5.08,0,7.62,0Z"/>
+								<path class="cls-1" d="m36.06,24.66c0,2.5.02,5,0,7.49-.03,2.53-1.58,4.14-4.09,4.16-5.04.04-10.08.04-15.12,0-2.57-.02-4.16-1.65-4.17-4.23-.02-5-.02-9.99,0-14.99,0-2.58,1.59-4.21,4.17-4.22,5.04-.03,10.08-.04,15.12,0,2.51.02,4.06,1.62,4.09,4.15.03,2.54,0,5.08,0,7.63Zm-11.59-6.98c-3.86.02-6.9,3.1-6.88,6.97.02,3.79,3.08,6.85,6.85,6.86,3.85,0,6.95-3.07,6.96-6.9,0-3.83-3.11-6.95-6.93-6.93Zm7.6-2.47c-.91-.02-1.76.81-1.78,1.73-.02.91.81,1.77,1.73,1.79.92.01,1.78-.82,1.78-1.73,0-.92-.81-1.77-1.73-1.79Z"/>
+								<path class="cls-1" d="m24.52,20.33c2.34.01,4.26,1.95,4.25,4.29-.01,2.35-1.94,4.26-4.29,4.25-2.34,0-4.26-1.94-4.24-4.29.01-2.34,1.95-4.26,4.28-4.25Z"/>
+							</svg>
+						</button>
+						<button>
+							<svg class="w-8 h-8" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 49 49">
+								<defs>
+									<style>
+									.cls-1 {
+										stroke-width: 0px;
+									}
+									</style>
+								</defs>
+								<path class="cls-1" d="m48.59,24.61c0,13.67-10.55,24.21-24.25,24.22-13.59,0-24.18-10.65-24.16-24.33C.2,10.93,10.83.32,24.39.34c13.69.02,24.2,10.56,24.2,24.27Zm-24.74,11.82c4.19-.35,8.03-.59,11.85-1.03,3.12-.35,4.08-1.26,4.75-4.36.96-4.46.95-8.96.04-13.43-.67-3.26-1.68-4.32-5.01-4.54-5.4-.37-10.83-.55-16.25-.56-2.52,0-5.04.51-7.55.87-1.42.2-2.46,1.08-2.81,2.45-.46,1.81-.89,3.66-1.05,5.51-.3,3.63-.25,7.26.82,10.8.51,1.69,1.55,2.85,3.39,3.05,4.04.44,8.08.84,11.82,1.23Z"/>
+								<path class="cls-1" d="m30.65,24.26c-3.2,1.84-6.09,3.51-9.17,5.28v-10.56c3.04,1.75,5.96,3.43,9.17,5.28Z"/>
+							</svg>
+						</button>
+						<button>
+							<svg class="w-8 h-8" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 49 49">
+								<defs>
+									<style>
+									.cls-1 {
+										stroke-width: 0px;
+									}
+									</style>
+								</defs>
+								<path class="cls-1" d="m24.3,48.67C10.58,48.61.14,38.01.19,24.17.23,10.69,10.95.15,24.57.2c13.6.05,24.08,10.72,24.03,24.44-.06,13.57-10.69,24.09-24.3,24.03Zm-5.34-19.87c.25.27.37.44.54.57,2.89,2.34,5.78,4.7,8.69,7.01,1.41,1.12,2.72.62,3.08-1.18,1.28-6.53,2.54-13.07,3.78-19.6.28-1.5-.21-1.92-1.63-1.41-1.73.62-3.44,1.3-5.16,1.95-6.31,2.38-12.62,4.74-18.91,7.17-.5.19-.82.86-1.23,1.3.44.36.83.88,1.33,1.05,1.44.5,2.92.96,4.42,1.25.69.13,1.58.04,2.17-.31,4.22-2.49,8.39-5.08,12.58-7.63.3-.18.62-.32.93-.47.05.08.1.16.15.24-3.57,3.34-7.13,6.67-10.74,10.05Z"/>
+							</svg>
+						</button>
+						<button>
+							<svg class="w-8 h-8" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 49 49">
+								<defs>
+									<style>
+									.cls-1 {
+										stroke-width: 0px;
+									}
+									</style>
+								</defs>
+								<path class="cls-1" d="m.2,24.22C.2,10.65,10.8.01,24.34,0c13.69-.01,24.29,10.64,24.27,24.37-.02,13.56-10.64,24.15-24.22,24.14-13.65,0-24.19-10.59-24.19-24.29Zm8.7,9.94c.4.33.57.52.78.64,6.04,3.64,15.07,2.99,20.55-1.45,4.34-3.51,6-8.26,6.25-13.63.04-.93.32-1.51,1.11-2.02.95-.62,1.94-1.31,2.1-2.77-.9.32-1.67.59-2.63.93.73-1.12,1.29-2,1.86-2.87-.09-.09-.19-.17-.28-.26-.84.31-1.67.72-2.54.9-.46.1-1.18,0-1.49-.31-3.83-3.78-10.23-1.81-11.47,3.85-.15.71-.26,1.43-.4,2.2-4.8-.81-8.77-2.9-12-6.7-1.18,2.69-1.01,5.23-.19,7.89-.59-.05-1.04-.08-1.63-.13.77,2.9,2.43,4.96,4.74,6.67h-1.84c.96,2.47,2.74,3.78,5.27,4.54-2.54,1.79-5.21,2.15-8.2,2.51Z"/>
+							</svg>
+						</button>
+						<button>
+							<svg class="w-8 h-8" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 49 49">
+								<defs>
+									<style>
+									.cls-1 {
+										stroke-width: 0px;
+									}
+									</style>
+								</defs>
+								<path class="cls-1" d="m48.65,24.64c-.02,13.6-10.68,24.17-24.36,24.13C10.77,48.74.19,38.06.21,24.48.23,10.86,10.89.24,24.52.29c13.65.04,24.15,10.64,24.13,24.35Zm-26.16,6.84c.51.29.89.49,1.26.71,1.55.92,3.18,1.07,4.94.73,3.86-.76,6.34-3.01,7.47-6.74,1.36-4.5,1.76-8.97-1.7-12.76-3.1-3.41-7.15-4.39-11.63-3.77-5.96.82-10.46,5.38-11.03,11.18-.26,2.67.68,4.91,2.65,6.7.74.67,1.79.93,2.51.23.44-.42.48-1.4.45-2.12-.02-.58-.4-1.14-.63-1.71-1.06-2.54-.74-4.91.99-7.02,1.38-1.7,3.12-2.92,5.27-3.52,2.98-.83,6.11.09,7.78,2.68,1.84,2.86,1.65,6.05.43,9.07-.52,1.27-1.59,2.39-2.62,3.36-.53.51-1.5.73-2.28.76-1.55.04-2.35-1.09-2.03-2.61.13-.64.31-1.28.42-1.93.31-1.85.76-3.7.85-5.56.08-1.72-1.39-2.83-3.01-2.26-.94.33-1.91,1.1-2.47,1.93-.99,1.47-1.01,3.21-.62,4.95.12.52.1,1.11-.02,1.63-.75,3.28-1.64,6.54-2.27,9.85-.27,1.42-.07,2.95.04,4.41.03.38.52.94.87,1,.33.06.93-.35,1.1-.7.81-1.64,1.55-3.32,2.23-5.02.43-1.09.69-2.24,1.06-3.47Z"/>
+							</svg>
+						</button>
 					</div>
 				</div>
-				
-				
 			</div>
 		</div>
 		
@@ -247,7 +274,7 @@
 				<div id = "Div1" class = "basis-1/3 bg-blue-500 max-h-10">
 					<div class = "flex flex-col">
 						<div class= "grow"></div>
-						<div id="Text1" class = "hidden p-4">
+						<div id="Text1" class = "element hidden p-4">
 							Our Tailwind CSS Image component simplifies image handling and styling, offering an array of classes to achieve the image effects that you are looking for in your website or application.
 						</div>
 					</div>
@@ -255,7 +282,7 @@
 				<div id = "Div2" class = "basis-1/3 bg-green-500 max-h-10">
 					<div class = "flex flex-col">
 						<div class= "grow"></div>
-						<div id="Text2" class = "hidden p-4">
+						<div id="Text2" class = "element hidden p-4">
 							Our Tailwind CSS Image component simplifies image handling and styling, offering an array of classes to achieve the image effects that you are looking for in your website or application.
 						</div>
 					</div>
@@ -263,7 +290,7 @@
 				<div id = "Div3" class = "basis-1/3 bg-orange-500 max-h-10">
 					<div class = "flex flex-col">
 						<div class= "grow"></div>
-						<div id="Text3" class = "hidden p-4">
+						<div id="Text3" class = "element hidden p-4">
 							Our Tailwind CSS Image component simplifies image handling and styling, offering an array of classes to achieve the image effects that you are looking for in your website or application.
 						</div>
 					</div>
@@ -345,7 +372,7 @@
 				<span class="text-sm text-gray-500 sm:text-center">© 2023 <a href="https://flowbite.com/">Flowbite™</a>. All Rights Reserved.
 				</span>
 				<div class="flex mt-4 sm:justify-center md:mt-0 space-x-5 rtl:space-x-reverse">
-					<a href="#" class="text-gray-400 hover:text-gray-900 dark:hover:text-white">
+					<a href="#" class="text-gray-400 hover:text-gray-900">
 						  <svg class="w-4 h-4" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 8 19">
 								<path fill-rule="evenodd" d="M6.135 3H8V0H6.135a4.147 4.147 0 0 0-4.142 4.142V6H0v3h2v9.938h3V9h2.021l.592-3H5V3.591A.6.6 0 0 1 5.592 3h.543Z" clip-rule="evenodd"/>
 							</svg>
@@ -369,7 +396,7 @@
 						  </svg>
 						  <span class="sr-only">GitHub account</span>
 					  </a>
-					  <a href="#" class="text-gray-400 hover:text-gray-900 dark:hover:text-white">
+					  <a href="#" class="text-gray-400 hover:text-gray-900">
 						  <svg class="w-4 h-4" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 20">
 							<path fill-rule="evenodd" d="M10 0a10 10 0 1 0 10 10A10.009 10.009 0 0 0 10 0Zm6.613 4.614a8.523 8.523 0 0 1 1.93 5.32 20.094 20.094 0 0 0-5.949-.274c-.059-.149-.122-.292-.184-.441a23.879 23.879 0 0 0-.566-1.239 11.41 11.41 0 0 0 4.769-3.366ZM8 1.707a8.821 8.821 0 0 1 2-.238 8.5 8.5 0 0 1 5.664 2.152 9.608 9.608 0 0 1-4.476 3.087A45.758 45.758 0 0 0 8 1.707ZM1.642 8.262a8.57 8.57 0 0 1 4.73-5.981A53.998 53.998 0 0 1 9.54 7.222a32.078 32.078 0 0 1-7.9 1.04h.002Zm2.01 7.46a8.51 8.51 0 0 1-2.2-5.707v-.262a31.64 31.64 0 0 0 8.777-1.219c.243.477.477.964.692 1.449-.114.032-.227.067-.336.1a13.569 13.569 0 0 0-6.942 5.636l.009.003ZM10 18.556a8.508 8.508 0 0 1-5.243-1.8 11.717 11.717 0 0 1 6.7-5.332.509.509 0 0 1 .055-.02 35.65 35.65 0 0 1 1.819 6.476 8.476 8.476 0 0 1-3.331.676Zm4.772-1.462A37.232 37.232 0 0 0 13.113 11a12.513 12.513 0 0 1 5.321.364 8.56 8.56 0 0 1-3.66 5.73h-.002Z" clip-rule="evenodd"/>
 						</svg>
