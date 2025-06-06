@@ -1,11 +1,11 @@
- .hide {
+.hide {
     visibility: hidden;
- }
+}
   
- .show {
+.show {
     visibility: visible;
     animation: ani 0.5s forwards;
-  }
+}
 
 
 @keyframes ani {
