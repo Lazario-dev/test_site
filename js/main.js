@@ -1,18 +1,25 @@
+
 function changeStyle(x){
 	var Div1 = document.getElementById("Div1");
 	var Div2 = document.getElementById("Div2");
 	var Div3 = document.getElementById("Div3");
 
 	if (x == 1) {
-		Div1.style.visibility = "visible";
+		const menuElement = document.getElementById('Div1');
+		menuElement.classList.remove('hide');
+		menuElement.classList.add('show');
 		return;
 	} else
 	if (x == 2) {
-        Div2.style.visibility = "visible";
+		const menuElement = document.getElementById('Div2');
+		menuElement.classList.remove('hide');
+		menuElement.classList.add('show');
 		return;
 	} else
 	if (x == 3) {
-        Div3.style.visibility = "visible";
+		const menuElement = document.getElementById('Div3');
+		menuElement.classList.remove('hide');
+		menuElement.classList.add('show');
 		return;
 	}
 }
@@ -23,15 +30,21 @@ function changeStyleback(x){
 	var Div3 = document.getElementById("Div3");
 
     if (x == 1) {
-        Div1.style.visibility = "hidden";
+		const menuElement = document.getElementById('Div1');
+		menuElement.classList.remove('show');
+		menuElement.classList.add('hide');
 		return;
 	}
 	if (x == 2) {
-        Div2.style.visibility = "hidden";
+		const menuElement = document.getElementById('Div2');
+		menuElement.classList.remove('show');
+		menuElement.classList.add('hide');
 		return;
 	}
 	if (x == 3) {
-        Div3.style.visibility = "hidden";
+		const menuElement = document.getElementById('Div3');
+		menuElement.classList.remove('show');
+		menuElement.classList.add('hide');
 		return;
 	}
 }
