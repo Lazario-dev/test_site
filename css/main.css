@@ -1,7 +1,11 @@
-.hide {
+.stat {
     visibility: hidden;
 }
-  
+
+.hide {
+    animation: ani1 0.5s forwards;
+}
+
 .show {
     visibility: visible;
     animation: ani 0.5s forwards;
@@ -11,4 +15,9 @@
 @keyframes ani {
     0% {transform: translateY(150%);}
     100% {transform: translateY(0);}
+}
+
+@keyframes ani1 {
+    0% {transform: translateY(0);}
+    100% {transform: translateY(150%);}
 }

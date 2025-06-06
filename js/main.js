@@ -6,19 +6,19 @@ function changeStyle(x){
 
 	if (x == 1) {
 		const menuElement = document.getElementById('Div1');
-		menuElement.classList.remove('hide');
+		menuElement.classList.remove('stat');
 		menuElement.classList.add('show');
 		return;
 	} else
 	if (x == 2) {
 		const menuElement = document.getElementById('Div2');
-		menuElement.classList.remove('hide');
+		menuElement.classList.remove('stat');
 		menuElement.classList.add('show');
 		return;
 	} else
 	if (x == 3) {
 		const menuElement = document.getElementById('Div3');
-		menuElement.classList.remove('hide');
+		menuElement.classList.remove('stat');
 		menuElement.classList.add('show');
 		return;
 	}
@@ -47,4 +47,8 @@ function changeStyleback(x){
 		menuElement.classList.add('hide');
 		return;
 	}
+}
+
+function sleep(ms) {
+  return new Promise(resolve => setTimeout(resolve, ms));
 }
